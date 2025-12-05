@@ -1,161 +1,143 @@
-/* BLUE MERIDIAN LTD
- * Theme: Corporate Modern (Palette C)
- * Colors:
- *  - Navy: #0b1530
- *  - Institutional Blue: #1f6feb
- *  - White: #ffffff
- *  - Light Grey: #e5e7eb
- *  - Dark Grey: #4b5563
- */
+/* ===== BLUE MERIDIAN LTD — Corporate Modern Theme (Palette B) ===== */
+/* Colors:
+   Navy: #0b1530
+   Blue: #1f6feb
+   Light Blue Accent: #5dc0ff
+   White: #ffffff
+   Grey: #e5e7eb
+   Dark Grey: #4b5563
+*/
 
+/* RESET */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: Arial, sans-serif;
-    background: #f4f5f8;
-    color: #111827;
+    background: #ffffff;
+    color: #0b1530;
     line-height: 1.6;
 }
 
-a {
-    text-decoration: none;
-    color: #1f6feb;
-}
-
+/* HEADER */
 header {
     background: #0b1530;
-    padding: 16px 40px;
+    color: white;
+    padding: 18px 40px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    position: sticky;
-    top: 0;
-    z-index: 50;
-    box-shadow: 0 4px 10px rgba(15,23,42,0.4);
+    align-items: center;
 }
 
 header .logo {
     font-size: 20px;
-    font-weight: 700;
-    letter-spacing: 1.4px;
-    color: #ffffff;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
 nav a {
+    color: #ffffff;
     margin-left: 22px;
-    font-size: 14px;
-    color: #e5e7eb;
-    text-transform: uppercase;
-    letter-spacing: 0.8px;
+    font-size: 15px;
+    text-decoration: none;
 }
 
 nav a:hover {
-    color: #93c5fd;
+    color: #5dc0ff;
 }
 
-.main-hero {
-    max-width: 960px;
-    margin: 32px auto 24px auto;
-    padding: 32px 24px;
-    background: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(15,23,42,0.12);
-    border: 1px solid #e5e7eb;
+/* HERO */
+.hero {
+    height: 75vh;
+    background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
 }
 
-.main-hero h1 {
-    font-size: 32px;
-    margin-bottom: 12px;
-    color: #111827;
+.hero-content {
+    max-width: 700px;
+    margin: auto;
+    background: rgba(11, 21, 48, 0.55);
+    padding: 40px;
+    border-radius: 10px;
 }
 
-.main-hero p {
-    font-size: 17px;
-    color: #4b5563;
-}
-
-.button-primary {
-    display: inline-block;
-    margin-top: 22px;
-    padding: 10px 24px;
-    background: #1f6feb;
+.hero h1 {
+    font-size: 36px;
     color: #ffffff;
-    border-radius: 4px;
-    font-weight: 600;
-    font-size: 14px;
+    margin-bottom: 15px;
 }
 
-.button-primary:hover {
-    background: #2563eb;
+.hero p {
+    color: #dbeafe;
+    font-size: 18px;
+    margin-bottom: 25px;
 }
 
+.btn-primary {
+    display: inline-block;
+    padding: 14px 28px;
+    background: #1f6feb;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    background: #5dc0ff;
+}
+
+/* SECTIONS */
 .section {
-    max-width: 960px;
-    margin: 0 auto 20px auto;
-    padding: 28px 24px;
-    background: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 8px 24px rgba(15,23,42,0.08);
-    border: 1px solid #e5e7eb;
+    padding: 60px 40px;
+    max-width: 1100px;
+    margin: auto;
 }
 
 .section h2 {
-    font-size: 22px;
-    margin-bottom: 10px;
-    color: #111827;
+    font-size: 28px;
+    margin-bottom: 15px;
 }
 
 .section p {
-    margin-bottom: 8px;
-    color: #4b5563;
+    margin-bottom: 20px;
 }
 
-.features-grid {
+/* GRID */
+.grid-3 {
     display: grid;
-    gap: 16px;
-    margin-top: 16px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 28px;
 }
 
-@media (min-width: 768px) {
-    .features-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
+.card {
+    background: #f3f4f6;
+    padding: 24px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
 }
 
-.feature-box {
-    background: #f9fafb;
-    padding: 16px;
-    border-radius: 6px;
-    border: 1px solid #e5e7eb;
+.card h3 {
+    margin-bottom: 12px;
 }
 
-.feature-box h3 {
-    margin-bottom: 6px;
-    color: #111827;
-    font-size: 16px;
+.category-list li {
+    margin-bottom: 8px;
 }
 
-.feature-box p {
-    color: #4b5563;
-    font-size: 14px;
-}
-
-.section ul {
-    margin-top: 6px;
-    margin-left: 18px;
-    color: #4b5563;
-    font-size: 14px;
-}
-
+/* FOOTER */
 footer {
     background: #0b1530;
+    color: white;
     text-align: center;
-    padding: 16px 10px;
-    margin-top: 24px;
-    font-size: 12px;
-    color: #e5e7eb;
+    padding: 20px;
+    margin-top: 40px;
 }
