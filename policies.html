@@ -1,90 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Policies – Blue Meridian Ltd</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Policies | Blue Meridian Ltd</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Overview of key business policies and compliance principles for Blue Meridian Ltd.">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-<header>
-    <div class="logo">BLUE MERIDIAN LTD</div>
-    <nav>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Blue Meridian</a>
+      <nav class="main-nav">
         <a href="index.html">Home</a>
         <a href="about.html">About us</a>
+        <a href="operations.html">Operations</a>
         <a href="contact.html">Contact</a>
-        <a href="policies.html">Policies</a>
-    </nav>
-</header>
+        <a href="policies.html" class="active">Policies</a>
+      </nav>
+    </div>
+  </header>
 
-<main>
-
-    <section class="section" id="returns">
-        <h2>Returns & refunds</h2>
-        <p>
-            Blue Meridian Ltd primarily sells through online marketplaces such as Amazon. When a
-            purchase is made through a marketplace, returns and refunds are processed according to
-            that marketplace’s policies and the applicable consumer law in the country of purchase.
+  <main>
+    <section class="hero hero-small">
+      <div class="container">
+        <h1>Business policies</h1>
+        <p class="hero-subtitle">
+          Blue Meridian operates with a focus on regulatory compliance, transparency and responsible supply chains.
         </p>
-        <p>
-            Customers should initiate any return or refund request directly through the marketplace
-            where the order was placed, using the tools provided on that platform.
-        </p>
+      </div>
     </section>
 
-    <section class="section" id="shipping">
-        <h2>Shipping & delivery</h2>
-        <p>
-            Orders are typically fulfilled using marketplace fulfilment solutions or third-party
-            logistics providers. Delivery times, tracking information and shipping options depend on
-            the marketplace, the customer’s location and the product involved.
-        </p>
-        <p>
-            Specific delivery information is shown on each listing at the time of purchase.
-        </p>
+    <section class="section">
+      <div class="container narrow">
+        <div class="card">
+          <h2>Policy framework</h2>
+          <p>
+            As a UK registered business, Blue Meridian aligns its operations with applicable legislation and marketplace rules. The following policy areas are part of our governance framework:
+          </p>
+          <ul class="list">
+            <li><strong>Terms of service</strong> for our corporate website and any direct interactions with counterparties.</li>
+            <li><strong>Privacy policy</strong> covering the handling of contact details and business information shared with us.</li>
+            <li><strong>Compliance statement</strong> summarising our commitment to applicable UK and EU regulations for consumer products.</li>
+            <li><strong>Supply chain policy</strong> addressing expectations towards suppliers on quality, documentation and ethical standards.</li>
+            <li><strong>Returns and warranty</strong> which apply to products sold through Amazon, in line with Amazon policies and local consumer law.</li>
+          </ul>
+          <p>
+            Detailed documents and additional information can be provided on request for legitimate institutional or regulatory purposes.
+          </p>
+        </div>
+      </div>
     </section>
+  </main>
 
-    <section class="section" id="privacy">
-        <h2>Privacy policy</h2>
-        <p>
-            We only collect and process the personal data necessary to operate our business, manage
-            orders and comply with legal obligations. When sales occur through marketplaces, most
-            customer data is processed inside those platforms in line with their own privacy policies.
-        </p>
-        <p>
-            We do not sell or share customer data with third parties for marketing purposes. Data
-            may be stored with service providers that support our operations (for example, logistics,
-            IT or cloud infrastructure providers), always under appropriate safeguards.
-        </p>
-        <p>
-            If you would like to request access to, correction of or deletion of personal data held
-            by Blue Meridian Ltd, please contact us using the details on the Contact page.
-        </p>
-    </section>
-
-    <section class="section" id="terms">
-        <h2>Terms & conditions</h2>
-        <p>
-            This website is provided for general information about Blue Meridian Ltd and its
-            activities. While we aim to keep the information accurate and up to date, we make no
-            guarantee that all content is complete or current at all times.
-        </p>
-        <p>
-            Nothing on this website constitutes legal, financial or professional advice. Blue
-            Meridian Ltd is not liable for any loss or damage arising from the use of this website or
-            reliance on its content. Links to third-party websites are provided for convenience only
-            and do not imply endorsement.
-        </p>
-    </section>
-
-</main>
-
-<footer>
-    <p>© 2025 Blue Meridian Ltd. Registered in England and Wales — Company Number 16884563.</p>
-    <p>Registered office: 71–75 Shelton Street, Covent Garden, London, WC2H 9JQ, United Kingdom.</p>
-</footer>
-
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Blue Meridian Ltd. All rights reserved.</p>
+      <p>Company number 16884563 · London, United Kingdom</p>
+    </div>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </footer>
 </body>
 </html>
