@@ -1,54 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact – Blue Meridian Ltd</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Contact | Blue Meridian Ltd</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Contact Blue Meridian Ltd for institutional enquiries, partnerships or supplier discussions.">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-<header>
-    <div class="logo">BLUE MERIDIAN LTD</div>
-    <nav>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Blue Meridian</a>
+      <nav class="main-nav">
         <a href="index.html">Home</a>
         <a href="about.html">About us</a>
-        <a href="contact.html">Contact</a>
+        <a href="operations.html">Operations</a>
+        <a href="contact.html" class="active">Contact</a>
         <a href="policies.html">Policies</a>
-    </nav>
-</header>
+      </nav>
+    </div>
+  </header>
 
-<main>
-    <section class="section">
-        <h2>Contact</h2>
-        <p>
-            For business, marketplace or compliance enquiries related to Blue Meridian Ltd,
-            please use the details below.
+  <main>
+    <section class="hero hero-small">
+      <div class="container">
+        <h1>Contact our team</h1>
+        <p class="hero-subtitle">
+          For institutional matters, partnership conversations or supply opportunities, please use the contact details below.
         </p>
-
-        <p><strong>Company:</strong> Blue Meridian Ltd</p>
-        <p><strong>Registered office:</strong><br>
-            71–75 Shelton Street, Covent Garden<br>
-            London, WC2H 9JQ<br>
-            United Kingdom
-        </p>
-
-        <p><strong>Email:</strong> info@blumeridian.com</p>
-        <p><strong>Phone:</strong> +44 7417 532389</p>
-
-        <p style="margin-top: 16px;">
-            For customer service about orders placed through marketplaces such as Amazon, please
-            use the messaging and support tools provided directly on the marketplace where you
-            completed your purchase.
-        </p>
+      </div>
     </section>
-</main>
 
-<footer>
-    <p>© 2025 Blue Meridian Ltd. Registered in England and Wales — Company Number 16884563.</p>
-    <p>Registered office: 71–75 Shelton Street, Covent Garden, London, WC2H 9JQ, United Kingdom.</p>
-</footer>
+    <section class="section">
+      <div class="container narrow">
+        <div class="card">
+          <h2>Contact details</h2>
+          <p>
+            Email is our primary communication channel for business related enquiries.
+          </p>
+          <p class="contact-line">
+            📧 <a href="mailto:contact@bluemeridian.uk">contact@bluemeridian.uk</a>
+          </p>
+          <p class="contact-line">
+            📍 London, United Kingdom
+          </p>
+          <p>
+            We aim to respond within two business days to relevant and clearly identified institutional messages.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
 
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Blue Meridian Ltd. All rights reserved.</p>
+      <p>Company number 16884563 · London, United Kingdom</p>
+    </div>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </footer>
 </body>
 </html>
