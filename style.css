@@ -1,143 +1,309 @@
-/* ===== BLUE MERIDIAN LTD — Corporate Modern Theme (Palette B) ===== */
-/* Colors:
-   Navy: #0b1530
-   Blue: #1f6feb
-   Light Blue Accent: #5dc0ff
-   White: #ffffff
-   Grey: #e5e7eb
-   Dark Grey: #4b5563
-*/
+/* Base */
 
-/* RESET */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: #ffffff;
-    color: #0b1530;
-    line-height: 1.6;
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #0f172a;
+  background-color: #f8fafc;
+  line-height: 1.6;
 }
 
-/* HEADER */
-header {
-    background: #0b1530;
-    color: white;
-    padding: 18px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-header .logo {
-    font-size: 20px;
-    font-weight: bold;
-    letter-spacing: 1px;
+a:hover {
+  text-decoration: underline;
 }
 
-nav a {
-    color: #ffffff;
-    margin-left: 22px;
-    font-size: 15px;
-    text-decoration: none;
+img {
+  max-width: 100%;
+  display: block;
 }
 
-nav a:hover {
-    color: #5dc0ff;
+/* Layout helpers */
+
+.container {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 16px;
 }
 
-/* HERO */
-.hero {
-    height: 75vh;
-    background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    padding: 0 20px;
+.narrow {
+  max-width: 720px;
+  margin: 0 auto;
 }
 
-.hero-content {
-    max-width: 700px;
-    margin: auto;
-    background: rgba(11, 21, 48, 0.55);
-    padding: 40px;
-    border-radius: 10px;
-}
-
-.hero h1 {
-    font-size: 36px;
-    color: #ffffff;
-    margin-bottom: 15px;
-}
-
-.hero p {
-    color: #dbeafe;
-    font-size: 18px;
-    margin-bottom: 25px;
-}
-
-.btn-primary {
-    display: inline-block;
-    padding: 14px 28px;
-    background: #1f6feb;
-    color: white;
-    font-size: 16px;
-    border-radius: 6px;
-    text-decoration: none;
-}
-
-.btn-primary:hover {
-    background: #5dc0ff;
-}
-
-/* SECTIONS */
 .section {
-    padding: 60px 40px;
-    max-width: 1100px;
-    margin: auto;
+  padding: 64px 0;
+}
+
+.section-alt {
+  background-color: #e5f1ff;
 }
 
 .section h2 {
-    font-size: 28px;
-    margin-bottom: 15px;
+  font-size: 1.9rem;
+  margin-bottom: 16px;
 }
 
-.section p {
-    margin-bottom: 20px;
+.section-intro {
+  max-width: 720px;
+  margin-bottom: 32px;
+  color: #475569;
 }
 
-/* GRID */
+/* Header */
+
+.site-header {
+  background-color: #0b3c63;
+  color: #e5f2ff;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+}
+
+.logo {
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.main-nav a {
+  margin-left: 20px;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.main-nav a.active {
+  font-weight: 600;
+  opacity: 1;
+}
+
+.main-nav a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* Hero */
+
+.hero {
+  padding: 80px 0 56px;
+  background: radial-gradient(circle at top left, #1f6fb8, #0b3c63);
+  color: #f8fafc;
+}
+
+.hero-small {
+  padding: 64px 0 32px;
+}
+
+.hero-inner {
+  max-width: 720px;
+}
+
+.hero h1 {
+  font-size: 2.3rem;
+  margin-bottom: 12px;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+  color: #dbeafe;
+}
+
+.hero-body {
+  color: #e2e8f0;
+  margin-bottom: 24px;
+}
+
+/* Buttons */
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn.primary {
+  background-color: #1f6fb8;
+  color: #f8fafc;
+  border-color: #1f6fb8;
+}
+
+.btn.primary:hover {
+  background-color: #165a94;
+  border-color: #165a94;
+  text-decoration: none;
+}
+
+.btn.secondary {
+  background-color: transparent;
+  color: #f8fafc;
+  border-color: #bfdbfe;
+}
+
+.btn.secondary:hover {
+  background-color: rgba(191, 219, 254, 0.12);
+  text-decoration: none;
+}
+
+/* Grid */
+
+.grid {
+  display: grid;
+  gap: 24px;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .grid-3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 28px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
+
+.grid-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+@media (max-width: 768px) {
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .main-nav a {
+    margin-left: 12px;
+    font-size: 0.9rem;
+  }
+
+  .hero h1 {
+    font-size: 1.9rem;
+  }
+}
+
+/* Cards and blocks */
 
 .card {
-    background: #f3f4f6;
-    padding: 24px;
-    border-radius: 8px;
-    border: 1px solid #d1d5db;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px 20px 18px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.card.subtle {
+  background-color: #f1f5f9;
+  box-shadow: none;
 }
 
 .card h3 {
-    margin-bottom: 12px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.05rem;
 }
 
-.category-list li {
-    margin-bottom: 8px;
+.stat-block {
+  padding: 18px 0;
 }
 
-/* FOOTER */
-footer {
-    background: #0b1530;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
+.stat-block h3 {
+  margin-bottom: 6px;
+  font-size: 1.05rem;
+}
+
+/* Lists */
+
+.list {
+  padding-left: 18px;
+  margin: 8px 0 0;
+  color: #4b5563;
+}
+
+.list li {
+  margin-bottom: 6px;
+}
+
+/* Pill cards (for categories) */
+
+.pill-card {
+  background-color: #ffffff;
+  border-radius: 999px;
+  padding: 18px 20px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+.pill-card h3 {
+  margin: 0 0 4px;
+  font-size: 0.98rem;
+}
+
+.pill-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* CTA section */
+
+.cta-section {
+  text-align: center;
+  background-color: #0b3c63;
+  color: #e5f2ff;
+}
+
+.cta-section h2 {
+  margin-bottom: 12px;
+}
+
+.cta-section p {
+  margin-bottom: 20px;
+  color: #dbeafe;
+}
+
+/* Contact */
+
+.contact-line {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+
+.site-footer {
+  background-color: #020617;
+  color: #9ca3af;
+  padding: 20px 0;
+  margin-top: 32px;
+}
+
+.footer-inner {
+  text-align: center;
+  font-size: 0.85rem;
 }
